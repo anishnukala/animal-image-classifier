@@ -19,19 +19,14 @@ Source: Kaggle Animals10 dataset
 Link: https://www.kaggle.com/datasets/alessiocorrado99/animals10/data
 
 - Total classes available: 10  
-
 - Used classes: Dog, Cat, Horse  
-
 - Images resized to: 96×96  
-
 - Train/Validation split: 80/20  
 
 Dataset size (approx):
 
 - Dog: 4863 images  
-
 - Cat: 1668 images  
-
 - Horse: 2623 images  
 
 ---
@@ -57,21 +52,13 @@ Dataset size (approx):
 CNN structure:
 
 - Input: (96, 96, 3)
-
 - Conv2D (32 filters) + MaxPooling
-
 - Conv2D (64 filters) + MaxPooling
-
 - Conv2D (128 filters) + MaxPooling
-
 - Flatten
-
 - Dense (128)
-
 - Dropout
-
 - Output: Softmax (3 classes)
-
 Total parameters: ~1.7M
 
 ---
@@ -79,11 +66,8 @@ Total parameters: ~1.7M
 ## 🏋️ Training
 
 - Optimizer: Adam  
-
 - Loss: Sparse Categorical Crossentropy  
-
 - Metric: Accuracy  
-
 - Epochs: ~20  
 ---
 
@@ -92,7 +76,6 @@ Total parameters: ~1.7M
 ### Overall Performance
 
 - Training Accuracy: ~68%  
-
 - Validation Accuracy: ~72–74%  
 
 ---
@@ -107,9 +90,7 @@ Total parameters: ~1.7M
 ## 📊 Key Observations
 
 - Strong bias toward predicting "Dog"
-
 - Cat class is poorly learned
-
 - Model struggles with visually complex or indoor images
 
 ---
@@ -147,18 +128,23 @@ To significantly improve performance:
 
 1. Open notebook in Google Colab
 
-2. Install kagglehub (if needed):
+2. Install kagglehub:
+```text
 pip install kagglehub
+```
 
 3. Download dataset directly from Kaggle:
-
+```text
 import kagglehub
 import os
 
 path = kagglehub.dataset_download("alessiocorrado99/animals10")
 dataset_path = os.path.join(path, "raw-img")
+```
 
 4. Verify dataset:
+```text
 print(os.listdir(dataset_path))
+```
 
 5. Run all cells
