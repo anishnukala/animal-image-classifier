@@ -14,14 +14,9 @@ Train a deep learning model to recognize animal classes and evaluate its perform
 
 ## 📊 Dataset
 
-Source: Kaggle Animals10 dataset  
+Source: Kaggle Animals10 dataset
 
-- Classes: 10 animal categories  
-- Structure: Images stored in folders by class  
-- Format: JPG images  
-
-Example:
- dataset/   dog/   cat/   horse/   elephant/
+Link: https://www.kaggle.com/datasets/alessiocorrado99/animals10/data
 
 ---
 
